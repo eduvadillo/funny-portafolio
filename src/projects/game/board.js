@@ -29,7 +29,7 @@ function Board() {
     const requestBody = { name, puntuacion };
 
     axios
-      .post(`http://localhost:5005/api/score-user`, requestBody)
+      .post(`${API_URL}/score-user`, requestBody)
       .then((response) => {
         setUserScore(response.data);
       })
