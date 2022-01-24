@@ -39,7 +39,7 @@ function Board() {
 
     setTimeout(() => {
       axios
-        .get(`http://localhost:5005/api/all-score`)
+        .get(`${API_URL}/all-score`)
         .then((response) => {
           setAllUsers(response.data);
           setCompleteForm(true);
