@@ -414,57 +414,6 @@ a {
 
 /* mobile */
 
-@media (max-width: 450px) {
-  section {
-    margin-top: 3rem;
-  }
-  section h1 {
-    font-size: 9vw;
-  }
-
-  .photo {
-    height: 20vh !important;
-  }
-  .photos-container {
-    width: auto !important;
-    margin-top: -8rem !important;
-    align-items: normal !important;
-    margin-bottom: 3rem;
-  }
-
-  .iconBackHome {
-    display: none !important;
-    /* margin-left: -11rem; */
-  }
-
-  .description-button {
-    margin-bottom: 2rem;
-  }
-  .central {
-    margin-top: 25rem;
-  }
-  .page-content-bet {
-    width: 95%;
-  }
-  .projects-div {
-    flex-direction: column;
-    top: 9rem;
-  }
-  .left {
-    display: none;
-  }
-  .left-icon {
-    display: flex;
-    margin-right: 2vw;
-  }
-  .show-telon {
-    height: 150vh !important;
-  }
-  .description-container {
-    align-items: flex-start !important;
-  }
-}
-
 @media (max-height: 650px) {
   .description-container {
     height: 26rem;
@@ -774,11 +723,6 @@ header {
   margin-bottom: 1rem;
 }
 
-.formGame-div form input::first-letter {
-  text-transform: uppercase;
-  color: blue;
-}
-
 .formGame-div form button {
   border: none;
   height: 3rem;
@@ -829,4 +773,211 @@ header {
 
 .user-playing {
   margin-top: 4rem;
+}
+
+@media (max-height: 450px) {
+  .yes-section {
+    display: none;
+  }
+  .puntuacion-div {
+    top: 24%;
+    width: 100% !important;
+    height: 43vh !important;
+  }
+}
+
+@media (max-width: 450px) {
+  section {
+    margin-top: 3rem;
+  }
+  section h1 {
+    font-size: 9vw;
+  }
+
+  .photo {
+    height: 20vh !important;
+  }
+  .photos-container {
+    width: auto !important;
+    margin-top: -8rem !important;
+    align-items: normal !important;
+    margin-bottom: 3rem;
+  }
+
+  .iconBackHome {
+    display: none !important;
+    /* margin-left: -11rem; */
+  }
+
+  .description-button {
+    margin-bottom: 2rem;
+  }
+  .central {
+    margin-top: 25rem;
+  }
+  .page-content-bet {
+    width: 95%;
+  }
+  .projects-div {
+    flex-direction: column;
+    top: 9rem;
+  }
+  .left {
+    display: none;
+  }
+  .left-icon {
+    display: flex;
+    margin-right: 2vw;
+  }
+  .show-telon {
+    height: 150vh !important;
+  }
+  .description-container {
+    align-items: flex-start !important;
+  }
+
+  .puntuacion-div {
+    position: absolute;
+    top: 75%;
+    width: 100% !important;
+    height: 25vh !important;
+    left: 0 !important;
+    display: flex;
+    justify-content: center;
+    background-color: var(--primary-color);
+    align-items: center;
+  }
+  .puntuacion-div h2 {
+    font-size: 12rem !important;
+  }
+
+  .loadingGameContainer {
+    display: flex;
+    display: flex;
+    justify-content: center;
+    top: 75%;
+    width: 100% !important;
+    height: 25vh !important;
+    left: 0 !important;
+    position: absolute;
+    animation: animationContent 5s linear;
+  }
+
+  .leftLoadingGame {
+    display: none !important;
+  }
+
+  .parLoading {
+    width: 100% !important;
+    background-color: var(--primary-color);
+    height: 25vh !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .parLoading h1 {
+    color: var(--bg-color);
+    font-size: 12rem !important;
+    font-weight: 600;
+  }
+
+  .imparLoading {
+    display: flex;
+    width: 100% !important;
+    background-color: var(--bg-color);
+    height: 25vh !important;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .imparLoading h1 {
+    color: var(--primary-color);
+    font-size: 12rem !important;
+    font-weight: 600;
+  }
+
+  .formGame-div {
+    position: absolute;
+    left: 0 !important;
+    top: 78% !important;
+    width: 100% !important;
+    height: 25vh !important;
+    display: flex;
+    justify-content: center;
+    background-color: var(--primary-color);
+    align-items: center;
+  }
+
+  .formGame-div form {
+    display: flex;
+    flex-direction: column;
+    width: 100vw !important;
+  }
+
+  .formGame-div form input {
+    text-align: center;
+    font-size: 1.5rem !important;
+    font-weight: 800;
+    border: none;
+    margin-bottom: 1rem;
+  }
+
+  .formGame-div form button {
+    border: none;
+    height: 2rem !important;
+    font-size: 1rem !important;
+    font-weight: 600;
+  }
+  .classification-div {
+    position: absolute;
+    left: 0% !important;
+    top: 75% !important;
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--primary-color);
+    align-items: center;
+    color: rgba(255, 255, 255, 0);
+    animation: classificationAnimeMobil 9s linear;
+    animation-fill-mode: forwards;
+  }
+  .classification-div h1 {
+    margin: 0;
+  }
+  .classification-div h2 {
+    margin: 0;
+  }
+  .divCounter {
+    position: absolute;
+    left: 85%;
+    top: 75%;
+  }
+
+  .divCounter h1 {
+    font-size: 2rem;
+  }
+}
+
+@keyframes classificationAnimeMobil {
+  0% {
+    /*  border-right: 2px solid #01fe87; */
+    color: rgba(255, 255, 255, 0);
+  }
+  20% {
+    color: var(--bg-color);
+  }
+
+  92% {
+    color: var(--bg-color);
+    height: 25vh;
+  }
+  99% {
+    color: rgba(255, 255, 255, 0);
+  }
+  100% {
+    height: 0vh;
+  }
 }
