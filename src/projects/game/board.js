@@ -33,10 +33,6 @@ function Board(props) {
       .post(`${API_URL}/score-user`, requestBody)
       .then((response) => {
         setUserScore(response.data);
-
-        setTimeout(() => {
-          props.viewProjects.viewProjects();
-        }, 9500);
       })
       .catch((error) => {
         const errorDescription = error.response.data.message;
@@ -48,6 +44,9 @@ function Board(props) {
         .then((response) => {
           setAllUsers(response.data);
           setCompleteForm(true);
+          setTimeout(() => {
+            props.viewProjects.viewProjects();
+          }, 9500);
         })
         .catch((error) => {
           const errorDescription = error.response.data.message;
