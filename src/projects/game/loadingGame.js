@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Board from "./board.js";
 
-function LoadingGame() {
+function LoadingGame(props) {
   const [loadingGame, setLoadingGame] = useState(true);
 
   const [counter, setCounter] = useState(5);
@@ -35,7 +35,7 @@ function LoadingGame() {
       </>
     );
   } else {
-    return <Board />;
+    return <Board viewProjects={props} />;
   }
 }
 

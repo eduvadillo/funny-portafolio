@@ -35,7 +35,8 @@ function App() {
   const [viewSection, setViewSection] = useState(`yes-section`);
   const [projectClassDiv, setProjectClassDiv] = useState("projects-div");
   const [telon, setTelon] = useState("hide-telon");
-
+  const [counter, setCounter] = useState(40);
+  const [viewProjects, setViewProjects] = useState(false);
 
   useEffect(() => {
     addEventListeners();
@@ -143,12 +144,24 @@ function App() {
     setNone(true);
   } */
 
+  /*   useEffect(() => {
+    if (counter > 0) {
+      setTimeout(() => setCounter(counter - 1), 1000);
+    }
+
+    if (counter === 0) {
+      setViewProjects(true);
+    }
+  }, [counter]); */
+
   const handleProjects = () => {
+    console.log(`he entrado`);
     if (viewSection === `yes-section`) {
       setViewSection(`no-section`);
 
       setTimeout(() => {
         setProjects(true);
+        setViewProjects(true);
       }, 1000);
     }
 
@@ -359,7 +372,7 @@ function App() {
           className={cursorClasses}
         ></div>
 
-        <LoadingGame />
+        <LoadingGame viewProjects={handleProjects} />
 
         {/*       <div className='canvas-div'>
         <Board />
@@ -368,15 +381,21 @@ function App() {
           <div className='page-content'>
             <header>
               {/*  <img src='images/' className='component-logo page-hover'></img> */}
-              <div className='page-hover projectClass'>
-                <a href='#projects'>
-                  <GrProjects
-                    size={30}
-                    className='mouseIsOver projectIcon cursor-link'
-                    onClick={handleProjects}
-                  />
-                </a>
-              </div>
+              {viewProjects ? (
+                <>
+                  <div className='page-hover projectClass'>
+                    <a href='#projects'>
+                      <GrProjects
+                        size={30}
+                        className='mouseIsOver projectIcon cursor-link'
+                        onClick={handleProjects}
+                      />
+                    </a>
+                  </div>
+                </>
+              ) : (
+                <div> </div>
+              )}
               <div className='theme-switch-wrapper mouseIsOver'>
                 <BsSun className='icon-theme' />
                 <label className='theme-switch'>

@@ -776,9 +776,9 @@ header {
 }
 
 @media (max-width: 450px) {
-  section {
+  /*   section {
     margin-top: 3rem;
-  }
+  } */
   section h1 {
     font-size: 9vw;
   }
@@ -827,7 +827,7 @@ header {
 
   .puntuacion-div {
     position: absolute;
-    top: 75%;
+    top: 76%;
     width: 100% !important;
     height: 25vh !important;
     left: 0 !important;
@@ -837,14 +837,14 @@ header {
     align-items: center;
   }
   .puntuacion-div h2 {
-    font-size: 12rem !important;
+    font-size: 10rem !important;
   }
 
   .loadingGameContainer {
     display: flex;
     display: flex;
     justify-content: center;
-    top: 75%;
+    top: 76%;
     width: 100% !important;
     height: 25vh !important;
     left: 0 !important;
@@ -867,7 +867,7 @@ header {
 
   .parLoading h1 {
     color: var(--bg-color);
-    font-size: 12rem !important;
+    font-size: 10rem !important;
     font-weight: 600;
   }
 
@@ -882,7 +882,7 @@ header {
 
   .imparLoading h1 {
     color: var(--primary-color);
-    font-size: 12rem !important;
+    font-size: 10rem !important;
     font-weight: 600;
   }
 
@@ -941,7 +941,7 @@ header {
   }
   .divCounter {
     position: absolute;
-    left: 85%;
+    left: 73%;
     top: 75%;
   }
 

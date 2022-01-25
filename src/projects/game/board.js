@@ -2,10 +2,11 @@ import { useState, useEffect, useRef } from "react";
 import Puntuacion from "./puntuacion";
 import axios from "axios";
 
-function Board() {
+function Board(props) {
   const canvasRef = useRef(null);
   const [puntuacion, setPuntuacion] = useState(0);
   const [counter, setCounter] = useState(30);
+  const [count2, setCount2] = useState(99);
   const [game, setGame] = useState(true);
 
   const [name, setName] = useState("");
@@ -25,12 +26,14 @@ function Board() {
 
   const handleLoginSubmit = (e) => {
     e.preventDefault();
+    props.viewProjects.viewProjects();
     const requestBody = { name, puntuacion };
 
     axios
       .post(`${API_URL}/score-user`, requestBody)
       .then((response) => {
         setUserScore(response.data);
+        props.viewProjects.viewProjects();
       })
       .catch((error) => {
         const errorDescription = error.response.data.message;
@@ -56,8 +59,22 @@ function Board() {
 
     if (counter === 0) {
       setGame(false);
+      console.log(`las props desde el board counter 0`, props.viewProjects);
+      console.log(`las props desde el board counter 0 exacta`, props.viewProjects.viewProjects);
     }
-  }, [counter]);
+  }, [count2 === 0]);
+
+  useEffect(() => {
+    if (game === true) {
+      if (count2 > 0) {
+        setTimeout(() => setCount2(count2 - 1), 10);
+      }
+
+      if (count2 === 0) {
+        setCount2(99);
+      }
+    }
+  }, [count2]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -202,7 +219,9 @@ function Board() {
           <Puntuacion puntuacion={puntuacion} />
         </div>
         <div className='divCounter'>
-          <h1>{counter}</h1>
+          <h1>
+            {counter} : {count2}
+          </h1>
         </div>
       </>
     );
