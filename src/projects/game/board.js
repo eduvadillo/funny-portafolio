@@ -26,7 +26,6 @@ function Board(props) {
 
   const handleLoginSubmit = (e) => {
     e.preventDefault();
-    props.viewProjects.viewProjects();
     const requestBody = { name, puntuacion };
 
     axios
