@@ -1,5 +1,3 @@
-import { useState, useEffect, useRef } from "react";
-
 function Puntuacion({ puntuacion }) {
   return (
     <>

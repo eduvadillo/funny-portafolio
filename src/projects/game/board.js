@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from "react";
 import Puntuacion from "./puntuacion";
-import FormGame from "./formGame";
 import axios from "axios";
 
 function Board() {

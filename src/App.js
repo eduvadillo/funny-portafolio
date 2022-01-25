@@ -13,7 +13,6 @@ import Tribboo from "./projects/tribboo";
 import Housfy from "./projects/housfy";
 import GreenJade from "./projects/greenJade";
 import Pokegotchi from "./projects/pokegotchi";
-import Board from "./projects/game/board";
 import LoadingGame from "./projects/game/loadingGame";
 
 function App() {
@@ -36,7 +35,7 @@ function App() {
   const [viewSection, setViewSection] = useState(`yes-section`);
   const [projectClassDiv, setProjectClassDiv] = useState("projects-div");
   const [telon, setTelon] = useState("hide-telon");
-  const [loadingGame, setLoadingGame] = useState(true);
+
 
   useEffect(() => {
     addEventListeners();

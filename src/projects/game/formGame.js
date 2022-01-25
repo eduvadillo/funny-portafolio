@@ -1,12 +1,10 @@
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import axios from "axios";
 
 function FormGame({ puntuacion }) {
   const [name, setName] = useState("");
   const [completeForm, setCompleteForm] = useState(false);
   const [allUsers, setAllUsers] = useState("");
-
-  const API_URL = process.env.REACT_APP_API_URL;
 
   const handleName = (e) => {
     const nameUser = e.target.value.charAt(0).toUpperCase() + e.target.value.slice(1);
