@@ -15,7 +15,6 @@ function Board() {
   const [userScore, setUserScore] = useState("");
 
   const API_URL = process.env.REACT_APP_API_URL;
-  console.log(`soy la api url`, API_URL);
 
   const handleName = (e) => {
     const nameUser = e.target.value.charAt(0).toUpperCase() + e.target.value.slice(1);
