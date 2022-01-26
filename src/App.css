@@ -775,6 +775,47 @@ header {
   margin-top: 4rem;
 }
 
+.divScore {
+  position: absolute;
+  font-size: 2rem;
+  top: 80%;
+  left: 70%;
+}
+
+.divScore h1 {
+  color: var(--bg-color);
+}
+
+.parInstructions {
+  width: 50%;
+  background-color: var(--primary-color);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imparInstructions {
+  display: flex;
+  width: 50%;
+  background-color: var(--bg-color);
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.parInstructions h2 {
+  color: var(--bg-color);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.imparInstructions h2 {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
 @media (max-width: 450px) {
   /*   section {
     margin-top: 3rem;
@@ -886,6 +927,40 @@ header {
     font-weight: 600;
   }
 
+  .parInstructions {
+    padding-left: 2rem;
+    padding-right: 1rem;
+    width: 100% !important;
+    background-color: var(--primary-color);
+    height: 25vh !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .parInstructions h2 {
+    color: var(--bg-color);
+    font-size: 1.5rem !important;
+    font-weight: 600;
+  }
+
+  .imparInstructions {
+    padding-left: 2rem;
+    padding-right: 1rem;
+    display: flex;
+    width: 100% !important;
+    background-color: var(--bg-color);
+    height: 25vh !important;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .imparInstructions h2 {
+    color: var(--primary-color);
+    font-size: 1.5rem !important;
+    font-weight: 600;
+  }
+
   .formGame-div {
     position: absolute;
     left: 0 !important;
@@ -946,7 +1021,14 @@ header {
   }
 
   .divCounter h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+  .theme-switch-wrapper {
+    margin-right: -2rem;
+  }
+
+  .divScore {
+    display: none;
   }
 }
 

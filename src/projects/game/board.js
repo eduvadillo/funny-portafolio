@@ -224,6 +224,9 @@ function Board(props) {
             {counter} : {count2}
           </h1>
         </div>
+        <div className='divScore'>
+          <h1>Score</h1>
+        </div>
       </>
     );
   } else if (game === false && completeForm === true) {
